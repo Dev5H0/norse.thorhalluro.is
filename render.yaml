@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: bun
+    runtime: docker
+    repo: https://github.com/Dev5H0/app_thorhallur_is-bun-hono-render
+    plan: starter
+    autoDeploy: false
