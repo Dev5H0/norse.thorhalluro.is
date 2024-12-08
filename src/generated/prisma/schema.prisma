@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Base {
+  slug        String  @id @unique
+  name        String
+  description String?
+
+  names Names[]
+  urls  Urls[]
+
+  partneredTo     Base[]      @relation("partners")
+  partneredBy     Base[]      @relation("partners")
+  siblingsTo      Base[]      @relation("siblings")
+  siblingsBy      Base[]      @relation("siblings")
+  parents         Base[]      @relation("lineage")
+  children        Base[]      @relation("lineage")
+  other_relations Relations[]
+}
+
+model Relations {
+  slug     String @id @unique
+  relation Base   @relation(fields: [slug], references: [slug])
+
+  person        String[]
+  relation_type String
+}
+
+model Names {
+  id       Int    @id @default(autoincrement())
+  relation Base   @relation(fields: [slug], references: [slug])
+  slug     String
+
+  name String
+  lang String?
+  note String?
+}
+
+model Urls {
+  id       Int    @id @default(autoincrement())
+  relation Base   @relation(fields: [slug], references: [slug])
+  slug     String
+
+  url   String
+  title String
+}

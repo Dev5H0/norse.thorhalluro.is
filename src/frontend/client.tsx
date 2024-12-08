@@ -6,7 +6,6 @@ export const www = new Elysia()
   .use(html())
   .get('/', async (ctx) => {
     const data = (await eden.api.json.index.get()).data;
-    console.log(data?.find((v) => v.slug == "loki"))
     return (
       <html>
         <head>
@@ -35,7 +34,6 @@ export const www = new Elysia()
   })
   .get('/:slug', async (ctx) => {
     const data = (await eden.api.json({ slug: ctx.params.slug }).get()).data;
-    console.log(data)
     return (
       <html>
         <head>
@@ -109,7 +107,6 @@ export const www = new Elysia()
                 <ul>
                   <h2>Notes</h2>
                   {data?.notes.map((v) => {
-                    console.log(v);
                     return <li>{v.note}</li>;
                   })}
                 </ul>
