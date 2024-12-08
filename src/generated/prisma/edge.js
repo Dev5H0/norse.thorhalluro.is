@@ -157,8 +157,7 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "debian-openssl-3.0.x",
-        "native": true
+        "value": "debian-openssl-1.1.x"
       }
     ],
     "previewFeatures": [],
@@ -166,7 +165,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
@@ -185,8 +184,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Base {\n  slug        String  @id @unique\n  name        String\n  description String?\n\n  names Names[]\n  urls  Urls[]\n\n  partneredTo     Base[]      @relation(\"partners\")\n  partneredBy     Base[]      @relation(\"partners\")\n  siblingsTo      Base[]      @relation(\"siblings\")\n  siblingsBy      Base[]      @relation(\"siblings\")\n  parents         Base[]      @relation(\"lineage\")\n  children        Base[]      @relation(\"lineage\")\n  other_relations Relations[]\n}\n\nmodel Relations {\n  slug     String @id @unique\n  relation Base   @relation(fields: [slug], references: [slug])\n\n  person        String[]\n  relation_type String\n}\n\nmodel Names {\n  id       Int    @id @default(autoincrement())\n  relation Base   @relation(fields: [slug], references: [slug])\n  slug     String\n\n  name String\n  lang String?\n  note String?\n}\n\nmodel Urls {\n  id       Int    @id @default(autoincrement())\n  relation Base   @relation(fields: [slug], references: [slug])\n  slug     String\n\n  url   String\n  title String\n}\n",
-  "inlineSchemaHash": "91af1f37b6ed99885884d331a3b8919ccdbda605bf324a8a937a1103fab0c172",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../src/generated/prisma\"\n  binaryTargets = [\"debian-openssl-1.1.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Base {\n  slug        String  @id @unique\n  name        String\n  description String?\n\n  names Names[]\n  urls  Urls[]\n\n  partneredTo     Base[]      @relation(\"partners\")\n  partneredBy     Base[]      @relation(\"partners\")\n  siblingsTo      Base[]      @relation(\"siblings\")\n  siblingsBy      Base[]      @relation(\"siblings\")\n  parents         Base[]      @relation(\"lineage\")\n  children        Base[]      @relation(\"lineage\")\n  other_relations Relations[]\n}\n\nmodel Relations {\n  slug     String @id @unique\n  relation Base   @relation(fields: [slug], references: [slug])\n\n  person        String[]\n  relation_type String\n}\n\nmodel Names {\n  id       Int    @id @default(autoincrement())\n  relation Base   @relation(fields: [slug], references: [slug])\n  slug     String\n\n  name String\n  lang String?\n  note String?\n}\n\nmodel Urls {\n  id       Int    @id @default(autoincrement())\n  relation Base   @relation(fields: [slug], references: [slug])\n  slug     String\n\n  url   String\n  title String\n}\n",
+  "inlineSchemaHash": "b1285985afcdfad3dfb94aad6906f46e6461285cbef77307d332ba83f829f862",
   "copyEngine": true
 }
 config.dirname = '/'
