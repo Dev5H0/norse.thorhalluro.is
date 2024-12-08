@@ -1,0 +1,92 @@
+:root {
+  --green-dark: #052817;
+  --red-dark: #28040e;
+  --blue-dark: #051322;
+  --gold: #d4a003;
+}
+
+html {
+  overflow: hidden;
+  scrollbar-width: none;
+  height: 95vh;
+  width: 95vw;
+  margin: auto;
+
+  background-color: var(--blue-dark);
+
+  align-content: center;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  justify-items: center;
+}
+
+.bg-green {
+  background-color: var(--green-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gold);
+}
+
+a {
+  color: gold;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none inside;
+}
+
+.container {
+  overflow-y: scroll;
+  scrollbar-width: 0.5pt;
+
+  margin: 2vh;
+  height: 100%;
+
+  border: 3pt;
+  border-style: solid;
+  border-radius: 8pt;
+  border-color: var(--gold);
+}
+
+section {
+  padding: 0 5pt;
+}
+
+ul.list {
+  padding: 0 5pt;
+}
+
+li.list-item {
+  padding: 5pt;
+  margin: 2pt;
+  border: 0pt;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: var(--gold);
+}
+
+hr {
+  margin: 1.5pt;
+  height: 1.5pt;
+  border-top: 0.5pt solid;
+  border-bottom: 0.5pt solid;
+  border-left: 0px;
+  border-right: 0px;
+  color: var(--gold);
+}
+
+.nav-home {
+  float: right;
+  margin: 5pt;
+  margin-right: 8pt;
+}
