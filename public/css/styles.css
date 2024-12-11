@@ -2,7 +2,22 @@
   --green-dark: #052817;
   --red-dark: #28040e;
   --blue-dark: #051322;
-  --gold: #d4a003;
+  --gold-dark: #d4a003;
+  --gold-light: gold;
+
+  --color-bg: var(--green-dark);
+  --color-bg-html: var(--blue-dark);
+
+  --color-hr: var(--gold-dark);
+  --color-border: var(--gold-dark);
+
+  --color-link: var(--gold-light);
+  --color-link-visited: var(--gold-light);
+
+  --color-text: var(--gold-light);
+  --color-header: var(--gold-dark);
+
+  --show-scrollbar: scroll; /* "scroll" or "hidden" */
 }
 
 html {
@@ -12,7 +27,7 @@ html {
   width: 95vw;
   margin: auto;
 
-  background-color: var(--blue-dark);
+  background-color: var(--color-bg-html);
 
   align-content: center;
   place-content: center;
@@ -23,7 +38,7 @@ html {
 }
 
 .bg-green {
-  background-color: var(--green-dark);
+  background-color: var(--color-bg);
 }
 
 h1,
@@ -32,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--gold);
+  color: var(--color-header);
 }
 
 a {
@@ -45,16 +60,17 @@ ul {
 }
 
 .container {
-  overflow-y: scroll;
+  overflow-y: var(--show-scrollbar);
   scrollbar-width: 0.5pt;
 
   margin: 2vh;
   height: 100%;
+  width: 100%;
 
   border: 3pt;
   border-style: solid;
   border-radius: 8pt;
-  border-color: var(--gold);
+  border-color: var(--color-border);
 }
 
 section {
@@ -72,7 +88,7 @@ li.list-item {
   border-left: 0px;
   border-right: 0px;
   border-style: solid;
-  border-color: var(--gold);
+  border-color: var(--color-border);
 }
 
 hr {
@@ -82,7 +98,7 @@ hr {
   border-bottom: 0.5pt solid;
   border-left: 0px;
   border-right: 0px;
-  color: var(--gold);
+  color: var(--color-hr);
 }
 
 .nav-home {
