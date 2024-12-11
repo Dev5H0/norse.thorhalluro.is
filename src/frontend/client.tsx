@@ -66,7 +66,7 @@ export const www = new Elysia()
                   </ul>
                   <ul>
                     <h3>Children</h3>
-                    {data?.parents.map((v) => {
+                    {data?.children.map((v) => {
                       try { return (
                         <li>
                           <a href={'/' + v.slug}>{v.name}</a>
@@ -78,7 +78,7 @@ export const www = new Elysia()
                   </ul>
                   <ul>
                     <h3>Parents</h3>
-                    {data?.children.map((v) => {
+                    {data?.parents.map((v) => {
                       try { return (
                         <li>
                           <a href={'/' + v.slug}>{v.name}</a>
