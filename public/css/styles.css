@@ -5,6 +5,8 @@
   --gold-dark: #d4a003;
   --gold-light: gold;
 
+  --font-size: 2vmin;
+
   --color-bg: var(--green-dark);
   --color-bg-html: var(--blue-dark);
 
@@ -52,6 +54,7 @@ h6 {
 
 a {
   color: gold;
+  font-size:1.25rem;
   text-decoration: none;
 }
 
@@ -92,10 +95,10 @@ li.list-item {
 }
 
 hr {
-  margin: 1.5pt;
-  height: 1.5pt;
-  border-top: 0.5pt solid;
-  border-bottom: 0.5pt solid;
+  margin: 0.2rem;
+  height: 0.2rem;
+  border-top: 0.125rem solid;
+  border-bottom: 0.125rem solid;
   border-left: 0px;
   border-right: 0px;
   color: var(--color-hr);
