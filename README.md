@@ -1,15 +1,25 @@
-# app_thorhallur_is-bun-hono-render
+# Graduation Project
 
-To install dependencies:
+Norse Family Tree Navigation Website @ [thorhalluro.is](https://thorhalluro.is)
 
-```bash
-bun install
-```
+## Tools Used
 
-To run:
+- [Bun](https://bun.sh) & [ElysiaJS](https://elysiajs.com) for developing the website.
+- [Prisma](https://www.prisma.io) & [Postgres](https://www.postgresql.org) for database management and handling.
+- [Docker](https://www.docker.com) & [Render](https://render.com) for hosting the website.
+- [Cloudflare](https://www.cloudflare.com/en-gb/) & [ISNIC](https://www.isnic.is) for handling the domain.
+- [Inkscape](https://inkscape.org) for creating the favicon.
+- [Obsidian](https://obsidian.md) for making this presentation.
+- [Wikipedia](https://en.wikipedia.org/wiki/Family_trees_of_the_Norse_gods) for information, and [Google](https://www.google.com) for fact checking.
 
-```bash
-bun run index.ts
-```
 
-This project was created using `bun init` in bun v1.1.34. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Plans
+- [ ] Fix styling on Opera & OperaGX. 
+- [ ] Add descriptions. 
+- [ ] Cite sources. 
+- [ ] Misc relations. 
+
+
+## Notes
+Styling is slightly broken on Opera & Opera GX. 
+
