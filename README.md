@@ -19,7 +19,3 @@ Norse Family Tree Navigation Website @ [thorhalluro.is](https://thorhalluro.is)
 - [ ] Cite sources. 
 - [ ] Misc relations. 
 
-
-## Notes
-Styling is slightly broken on Opera & Opera GX. 
-
