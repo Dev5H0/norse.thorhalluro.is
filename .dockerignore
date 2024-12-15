@@ -3,3 +3,6 @@ node_modules
 
 prisma
 .env
+
+docs
+README.md
